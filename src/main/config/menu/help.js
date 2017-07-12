@@ -5,13 +5,13 @@ export default [
   {
     label: 'Visit Our Website',
     click: () => {
-      shell.openExternal('https://fenego.eu');
+      shell.openExternal('https://thomastheunen.eu');
     }
   },
   {
     label: `View Changelog For v${pkg.version}`,
     click: () => {
-      shell.openExternal(`https://bitbucket.org/theunth/fenego-logviewer`);
+      shell.openExternal(`https://github.com/taurgis/electron-react-boilerplate`);
     }
   }
 ];
