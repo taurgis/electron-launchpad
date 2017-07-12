@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Welcome to Buttercup</title>
+  <script>
+    (function() {
+      if (!process.env.HOT) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../dist/main.css';
+        document.write(link.outerHTML);
+      }
+    }());
+  </script>
+  <style media="screen">
+    #root {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    const script = document.createElement('script');
+    script.src = (process.env.HOT) ? 'http://localhost:3000/app/main.bundle.js' : '../dist/main.bundle.js';
+    document.head.appendChild(script);
+  </script>
+</body>
+
+</html>

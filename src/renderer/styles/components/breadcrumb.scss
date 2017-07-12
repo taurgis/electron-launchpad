@@ -1,0 +1,25 @@
+.breadcrumb {
+  height: 50px;
+  background-color: #f5f5f5;
+  margin-left: -10px;
+  margin-top: 3px;
+  padding-right: 10px;
+  color: #999;
+
+  > div {
+    font-size: 16px;
+
+    span {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  .breadcrumb-link {
+    color: #999;
+  }
+}
+
+.middle {
+  vertical-align: middle;
+}

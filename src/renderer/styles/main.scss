@@ -1,0 +1,50 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+main {
+  margin-left: 10px;
+
+  &.lp300 {
+    padding-left: 300px;
+  }
+
+  &.lp100 {
+    padding-left: 100px;
+  }
+}
+
+.appContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .mainRow {
+    height: 100%;
+
+    .appColumn {
+      height: 100%;
+    }
+  }
+}
+
+.noFloat {
+  display: table;
+  float: none;
+}
+@media only screen and (min-width: 992px) {
+  main {
+    padding-left: 300px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main.lp100,
+  main.lp300 {
+    padding-left: 100px;
+  }
+}

@@ -1,0 +1,57 @@
+.side-nav {
+  background-color: #353541;
+
+  .brandLogo {
+    width: 100%;
+  }
+
+  li a,
+  li i.whiteIcon {
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .side-nav.large {
+    width: 300px;
+
+    li a,
+    li i.whiteIcon {
+      font-size: 20px;
+    }
+  }
+
+  .small {
+    width: 100px;
+
+    li {
+      padding-bottom: 15px;
+
+      a {
+        i {
+          font-size: 40px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .side-nav {
+    li {
+      padding-bottom: 15px;
+
+      a {
+        i {
+          font-size: 40px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
