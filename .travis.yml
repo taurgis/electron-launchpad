@@ -8,9 +8,6 @@ node_js:
 
 script: ./script/travis.sh
 
-before_install:
-  - rm yarn.lock
-
 branches:
   only:
   - master
