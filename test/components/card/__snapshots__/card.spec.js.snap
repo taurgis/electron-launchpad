@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component Matches/Renders a snapshot 1`] = `
+<div
+  className="card"
+  style={
+    Object {
+      "borderTop": "3px solid red",
+    }
+  }
+>
+  Test card content
+</div>
+`;

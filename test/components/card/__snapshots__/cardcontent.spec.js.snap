@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card - Card Content component Matches/Renders a snapshot 1`] = `
+<div
+  className="card-content"
+  style={
+    Object {
+      "paddingBottom": "1px",
+    }
+  }
+>
+  <div
+    className="row"
+  >
+    Test content
+  </div>
+</div>
+`;

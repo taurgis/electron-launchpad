@@ -1,7 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import Card from '../components/card.jsx'
+import Card from '../components/card/card.jsx'
+import CardTitle from '../components/card/cardtitle.jsx'
+import CardContent from '../components/card/cardcontent.jsx'
 import FaIcon from '../components/faicon.jsx';
 
 import materialize from '../styles/vendor/materialize.scss';
@@ -12,39 +14,55 @@ class Dashboard extends React.Component {
     super(props);
   }
 
-  createFaIconCard(icon, color, title, description) {
-    return () => {
-      return (
-        <div className={materialize.row}>
-          <div className={[materialize.col, materialize.s6].join(' ')}>
-            <FaIcon color={color} code={icon} size={5}/>
-          </div>
-          <div className={[materialize.col, materialize.s6, materialize['right-align']].join(' ')}>
-            <h6>{title}</h6>
-            <span>{description}</span>
-          </div>
-        </div>
-      )
-    }
-  }
-
   render() {
     return (
       <div>
         <div className={materialize.row}>
           <div className={classNames(materialize.col, materialize.s6, materialize.l3, materialize['offset-l1'])}>
-            <Card content={this.createFaIconCard('exclamation-triangle', '#FF5252', '6', 'exceptions')} top-border-color='#FF5252'/>
+            <Card top-border-color='#FF5252'>
+              <CardContent>
+                <div className={classNames(materialize.col, materialize.s6)}>
+                  <FaIcon color='#FF5252' code='exclamation-triangle' size={5} />
+                </div>
+                <div className={classNames(materialize.col, materialize.s6, materialize['right-align'])}>
+                  <h6>26</h6>
+                  <span>exceptions</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           <div className={classNames(materialize.col, materialize.s6, materialize.l3)}>
-            <Card content={this.createFaIconCard('bug', '#F2B53F', '23', 'warnings')} top-border-color='#F2B53F'/>
+            <Card top-border-color='#F2B53F'>
+              <CardContent>
+                <div className={classNames(materialize.col, materialize.s6)}>
+                  <FaIcon color='#F2B53F' code='bug' size={5} />
+                </div>
+                <div className={classNames(materialize.col, materialize.s6, materialize['right-align'])}>
+                  <h6>12</h6>
+                  <span>warnings</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           <div className={classNames(materialize.col, materialize.s6, materialize.l3)}>
-            <Card content={this.createFaIconCard('bug', '#009688', '0', 'debug messages')} top-border-color='#009688'/>
+            <Card top-border-color='#009688'>
+              <CardContent>
+                <div className={classNames(materialize.col, materialize.s6)}>
+                  <FaIcon color='#009688' code='bug' size={5} />
+                </div>
+                <div className={classNames(materialize.col, materialize.s6, materialize['right-align'])}>
+                  <h6>0</h6>
+                  <span>debug messages</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
     );
   }
 };
+
+
 
 export default Dashboard
