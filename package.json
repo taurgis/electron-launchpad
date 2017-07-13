@@ -5,7 +5,7 @@
   "main": "app/dist/app.js",
   "scripts": {
     "clean": "rimraf ./app/node_modules",
-    "test": "jest",
+    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
     "lint": "eslint ./src ./config",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.electron --progress --colors",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.production --progress --colors",
@@ -79,15 +79,18 @@
   "license": "GPL-3.0",
   "homepage": "https://bitbucket.org/theunth/fenego-logviewer#readme",
   "jest": {
-    "testRegex": "test/(?!e2e/)[^/]+/.+\\.spec\\.jsx$",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    },
     "moduleFileExtensions": [
-      "jsx"
+      "js"
     ],
     "moduleDirectories": [
       "node_modules"
     ],
     "transform": {
-      "^.+\\.jsx$": "babel-jest"
+      "^.+\\.js$": "babel-jest"
     }
   },
   "devDependencies": {
