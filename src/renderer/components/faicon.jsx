@@ -4,22 +4,24 @@ import PropTypes from 'prop-types';
 
 import icon from '../styles/icon.scss'
 
-const FaIcon = ({code, size, color, container}) => {
-  switch (container) {
-    case 'span':
-      return (
-        <span style={{
-          color: color
-        }} className={classNames(icon.fa, icon['fa-' + code], icon['fa-' + size + 'x'])}></span>
-      )
-    default:
-      return (
-        <i style={{
-          color: color
-        }} className={classNames(icon.fa, icon['fa-' + code], icon['fa-' + size + 'x'])}></i>
-      )
+const FaIcon = class FaIcon extends React.Component {
+  constructor(props) {
+    super(props);
+
+    if (!this.props.container) {
+      this.Container = 'i';
+    } else {
+      this.Container = this.props.container;
+    }
   }
 
+  render() {
+    return (
+      <this.Container style={{
+        color: this.props.color
+      }} className={classNames(icon.fa, icon['fa-' + this.props.code], icon['fa-' + this.props.size + 'x'])}></this.Container>
+    )
+  }
 };
 
 FaIcon.propTypes = {
