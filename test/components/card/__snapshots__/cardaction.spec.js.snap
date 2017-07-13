@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card - Card Title component Matches/Renders a snapshot 1`] = `
+<div
+  className="card-action"
+>
+  <a
+    href="link url 1"
+  >
+    link 1
+  </a>
+  <a
+    href="link url 2"
+  >
+    link 2
+  </a>
+</div>
+`;

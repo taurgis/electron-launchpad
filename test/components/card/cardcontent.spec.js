@@ -14,7 +14,7 @@ function setupStandard() {
 }
 
 describe('Card - Card Content component', () => {
-    it('should be of type span', () => {
+    it('should be of type div', () => {
         const { component } = setupStandard();
         expect(component.type).toBe('div');
     });
