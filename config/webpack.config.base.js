@@ -29,8 +29,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
   },
-  plugins: [],
-  externals: [
-    'buttercup-importer', 'zxcvbn', 'dropbox', 'webdav'
-  ]
+  plugins: []
 };

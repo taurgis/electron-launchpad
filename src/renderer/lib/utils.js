@@ -51,10 +51,6 @@ export function isLinux() {
   return process.platform === 'linux';
 }
 
-export function isButtercupFile(filePath) {
-  return path.extname(filePath).toLowerCase() === '.bcup';
-}
-
 export function emitActionToParentAndClose(name, payload) {
   const win = remote.getCurrentWindow();
   const rpc = win.getParentWindow().rpc;

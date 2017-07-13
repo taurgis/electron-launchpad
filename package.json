@@ -5,7 +5,7 @@
   "main": "app/dist/app.js",
   "scripts": {
     "clean": "rimraf ./app/node_modules",
-    "test": "ava && yarn lint",
+    "test": "jest",
     "lint": "eslint ./src ./config",
     "build:main": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.electron --progress --colors",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.production --progress --colors",
@@ -21,6 +21,53 @@
     "package": "build --mac --linux --win --x64 -p always",
     "package:current": "build"
   },
+  "build": {
+    "appId": "eu.thomastheunen.electronreactboilerplate",
+    "copyright": "Copyright © 2015-2017 Thomas Theunen",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "background": "./build/background@2x.png",
+      "contents": [
+        {
+          "x": 396,
+          "y": 345,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 396,
+          "y": 110,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 660,
+        "height": 480
+      }
+    },
+    "nsis": {
+      "perMachine": true
+    },
+    "linux": {
+      "target": [
+        "rpm",
+        "AppImage",
+        "deb"
+      ],
+      "packageCategory": "utils",
+      "synopsis": "A boilerplate project for electron application built with react."
+    },
+    "fileAssociations": {
+      "ext": ".txt",
+      "name": "Sample file association",
+      "icon": "./build/logo.ico"
+    },
+    "directories": {
+      "output": "release"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://theunth@bitbucket.org/theunth/fenego-logviewer.git"
@@ -28,11 +75,22 @@
   "keywords": [
     "fenego"
   ],
-  "author": "Thomas Theunen",
-  "license": "MIT",
+  "author": "Thomas Theunen <thomas.theunen@fenego.be>",
+  "license": "GPL-3.0",
   "homepage": "https://bitbucket.org/theunth/fenego-logviewer#readme",
+  "jest": {
+    "testRegex": "test/(?!e2e/)[^/]+/.+\\.spec\\.jsx$",
+    "moduleFileExtensions": [
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.jsx$": "babel-jest"
+    }
+  },
   "devDependencies": {
-    "@buttercup/ui": "^0.6.1",
     "@types/node": "^6.0.45",
     "@types/react": "^0.14.41",
     "@types/redux": "^3.6.31",
@@ -40,9 +98,12 @@
     "ava": "^0.17.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.0",
+    "babel-jest": "^20.0.3",
     "babel-loader": "^6.2.10",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-dynamic-import-webpack": "^1.0.1",
+    "babel-plugin-import": "^1.2.1",
     "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-polished": "^1.0.3",
     "babel-plugin-transform-class-properties": "^6.22.0",
@@ -57,16 +118,14 @@
     "babel-preset-react-optimize": "^1.0.1",
     "babel-register": "^6.18.0",
     "babili-webpack-plugin": "^0.1.1",
-    "buttercup-importer": "~0.9.1",
-    "buttercup-web": "~0.32.0",
     "classnames": "^2.2.5",
     "concurrently": "^2.1.0",
     "cross-env": "^1.0.8",
+    "cross-spawn": "^5.1.0",
     "css-loader": "^0.25.0",
     "deep-assign": "^2.0.0",
     "del": "^2.2.1",
     "devtron": "^1.4.0",
-    "dropbox-fs": "^0.0.5",
     "electron": "^1.6.10",
     "electron-builder": "^19.4.2",
     "electron-debug": "^1.1.0",
@@ -82,6 +141,7 @@
     "eslint-config-standard-react": "^4.3.0",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
@@ -99,6 +159,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "humanize": "^0.0.9",
     "is-error": "^2.2.1",
+    "jasmine": "^2.6.0",
+    "jest": "^20.0.4",
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "load-grunt-tasks": "^3.3.0",
@@ -123,16 +185,10 @@
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.0.0",
     "react-split-pane": "^0.1.61",
-    "redux": "^3.5.2",
-    "redux-actions": "^2.0.1",
-    "redux-electron-store": "^0.4.1",
-    "redux-form": "^6.4.3",
-    "redux-logger": "^3.0.0",
-    "redux-persist": "^3.1.1",
-    "redux-thunk": "^2.1.0",
     "reselect": "^2.5.4",
     "rimraf": "^2.5.3",
     "sass-loader": "^4.0.2",
+    "sinon": "^2.3.7",
     "spectron": "^3.6.4",
     "style-loader": "^0.13.1",
     "styled-components": "^1.4.4",

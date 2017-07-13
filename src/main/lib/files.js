@@ -27,7 +27,7 @@ function normalizePath(filePath) {
 function showOpenDialog(focusedWindow) {
   const filename = dialog.showOpenDialog(focusedWindow, {
     ...dialogOptions,
-    title: 'Load a Buttercup Archive'
+    title: 'Load a file'
   });
 
   if (filename && filename.length > 0) {
@@ -36,7 +36,7 @@ function showOpenDialog(focusedWindow) {
 }
 
 /**
- * Open File helper using Buttercup
+ * Open File helper.
  *
  * @param {String} filePath
  * @param {BrowserWindow} win
@@ -76,7 +76,7 @@ export function openFile(focusedWindow) {
 }
 
 /**
- * Create a new file and open it in Buttercup
+ * Create a new file and open it.
  * then ask the user for a password
  *
  * @param {BrowserWindow} focusedWindow
