@@ -19,7 +19,7 @@ const FaIcon = class FaIcon extends React.Component {
     return (
       <this.Container style={{
         color: this.props.color
-      }} className={classNames(icon.fa, icon['fa-' + this.props.code], icon['fa-' + this.props.size + 'x'])}></this.Container>
+      }} className={classNames(icon.fa, icon['fa-' + this.props.code], ((this.props.size) ? icon['fa-' + this.props.size + 'x'] : ''))}></this.Container>
     )
   }
 };

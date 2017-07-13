@@ -13,7 +13,7 @@ Currently this boilerplate is still under development and is also my personal "l
   - [x] Runnable app
   - [x] Running Webpack
   - [x] Build for Linux (DEB & RPM), Windows & Mac
-  - [ ] Running tests
+  - [x] Testing system in place
   - [x] Splash screen for loading (just for show)
   - [x] Styled left menu
   - [x] Styled top menu

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FaIcon component Matches/Renders a snapshot 1`] = `
+<i
+  className="fa fa-home"
+  style={
+    Object {
+      "color": "#fff",
+    }
+  }
+/>
+`;
+
+exports[`FaIcon component Matches/Renders a snapshot 2`] = `
+<span
+  className="fa fa-home fa-2x"
+  style={
+    Object {
+      "color": "#fff",
+    }
+  }
+/>
+`;
