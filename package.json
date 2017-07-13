@@ -80,17 +80,18 @@
   "homepage": "https://bitbucket.org/theunth/fenego-logviewer#readme",
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
-      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/fileMock.js",
+      "\\.(css|less|sass|scss)$": "<rootDir>/config/cssMock.js"
     },
     "moduleFileExtensions": [
-      "js"
+      "js",
+      "jsx"
     ],
     "moduleDirectories": [
       "node_modules"
     ],
     "transform": {
-      "^.+\\.js$": "babel-jest"
+      "^.+\\.(js|jsx)?$": "babel-jest"
     }
   },
   "devDependencies": {
@@ -110,6 +111,7 @@
     "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-polished": "^1.0.3",
     "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-plugin-transform-remove-console": "^6.8.0",
@@ -188,6 +190,7 @@
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.0.0",
     "react-split-pane": "^0.1.61",
+    "react-test-renderer": "^15.6.1",
     "reselect": "^2.5.4",
     "rimraf": "^2.5.3",
     "sass-loader": "^4.0.2",

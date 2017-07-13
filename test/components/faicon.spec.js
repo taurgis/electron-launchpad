@@ -1,21 +1,31 @@
 import { spy } from 'sinon';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { BrowserRouter as Router } from 'react-router-dom';
-import FaIcon from '../../src/renderer/comonents/faicon.jsx'
+import ReactShallowRenderer from 'react-test-renderer/shallow';
+import FaIcon from '../../src/renderer/components/faicon.jsx'
 
 function setup() {
-  const component = shallow(<FaIcon code='home' color='#fff'/>);
+  const renderer = new ReactShallowRenderer();
+  renderer.render(<FaIcon code='home' color='#fff' />);
+  const component = renderer.getRenderOutput();
+
   return {
-    component,
-    actions,
-    icon: component.find('span'),
+    component
   };
 }
 
 describe('FaIcon component', () => {
-  it('should should not contain text', () => {
-    const { icon } = setup();
-    expect(icon.text()).toMatch('');
+  it('should be of type i', () => {
+    const { component } = setup();
+    expect(component.type).toBe('i');
+  });
+
+  it('should contain no child elements (text)', () => {
+    const { component } = setup();
+    expect(component.props.children).toBe(undefined);
+  });
+
+   it('color should be #fff', () => {
+    const { component } = setup();
+    expect(component.props.style.color).toBe('#fff');
   });
 });
