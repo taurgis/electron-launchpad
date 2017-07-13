@@ -24,6 +24,7 @@ const CardAction = class CardAction extends React.Component {
                 {this.props.actions.map((actionButton, index) => (
                     <a key={actionButton.key} href={actionButton.url}>{actionButton.title}</a>
                 ))}
+                {this.props.children}
             </div>
         )
     }

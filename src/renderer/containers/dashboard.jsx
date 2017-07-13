@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import Card from '../components/card/card.jsx'
 import CardTitle from '../components/card/cardtitle.jsx'
+import CardImage from '../components/card/cardimage.jsx'
 import CardContent from '../components/card/cardcontent.jsx'
 import CardAction from '../components/card/cardaction.jsx'
 import FaIcon from '../components/faicon.jsx';
@@ -56,6 +57,17 @@ class Dashboard extends React.Component {
                   <span>debug messages</span>
                 </div>
               </CardContent>
+            </Card>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s6, materialize.l4, materialize['offset-l1'])}>
+            <Card>
+              <CardImage image='images/sample-1.jpg' title='This is a title' />
+              <CardContent>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+              </CardContent>
+              <CardAction actions={[{ title: 'link 1', url: 'link url 1' }, { title: 'link 2', url: 'link url 2' }]} />
             </Card>
           </div>
         </div>

@@ -8,16 +8,12 @@ import card from '../../styles/components/card.scss';
 const Card = class Card extends React.Component {
   constructor(props) {
     super(props);
-
-    if (!this.props['top-border-color']) {
-      this.props['top-border-color'] = 'none';
-    }
   }
 
   render() {
     return (
       <div className={materialize.card} style={{
-        borderTop: '3px solid ' + this.props['top-border-color']
+        borderTop: (this.props['top-border-color']) ? ('3px solid ' + (this.props['top-border-color'])) : '' 
       }}>
         {this.props.children}
       </div>
