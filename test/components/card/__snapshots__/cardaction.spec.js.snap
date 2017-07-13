@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card - Card Title component Matches/Renders a snapshot 1`] = `
+exports[`Card - Card action component Matches/Renders a snapshot 1`] = `
 <div
   className="card-action"
 >

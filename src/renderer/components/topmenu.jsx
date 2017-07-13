@@ -50,7 +50,6 @@ const TopMenu = class TopMenu extends React.Component {
                 <img src="images/yuna.jpg" alt="Contact Person"/>
               </div>
             </li>
-
           </ul>
         </div>
       </nav>

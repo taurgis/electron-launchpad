@@ -13,7 +13,7 @@ function setupStandard() {
     };
 }
 
-describe('Card - Card Title component', () => {
+describe('Card - Card title component', () => {
     it('should be of type span', () => {
         const { component } = setupStandard();
         expect(component.type).toBe('span');

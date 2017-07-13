@@ -15,7 +15,7 @@ function setupStandard() {
     };
 }
 
-describe('Card - Card Title component', () => {
+describe('Card - Card action component', () => {
     it('should be of type div', () => {
         const { component } = setupStandard();
         expect(component.type).toBe('div');
