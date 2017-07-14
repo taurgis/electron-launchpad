@@ -33,7 +33,7 @@ class Main extends React.Component {
           <header>
             <LeftMenu leftMenuSize={this.state.leftMenuSize}>
               <li>
-                <img className={leftmenu.brandLogo} src='images/logo.svg' />
+                <img className={leftmenu.brandLogo} src='images/logo.png' />
               </li>
               <li>
                 <Link to={loadingLocation}> 

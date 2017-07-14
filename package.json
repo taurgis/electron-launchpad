@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
+  "name": "electron-launchpad",
   "version": "0.1.0",
-  "description": "An Electron boilerplate using react",
+  "description": "An Electron quick-start project using React",
   "main": "app/dist/app.js",
   "scripts": {
     "clean": "rimraf ./app/node_modules",
@@ -22,7 +22,7 @@
     "package:current": "build"
   },
   "build": {
-    "appId": "eu.thomastheunen.electronreactboilerplate",
+    "appId": "eu.thomastheunen.electronlaunchpad",
     "copyright": "Copyright © 2017 Thomas Theunen",
     "mac": {
       "category": "public.app-category.productivity"
@@ -57,7 +57,7 @@
         "deb"
       ],
       "packageCategory": "utils",
-      "synopsis": "A boilerplate project for electron application built with react."
+      "synopsis": "A quick-start project for an Electron application built with React."
     },
     "fileAssociations": {
       "ext": ".txt",

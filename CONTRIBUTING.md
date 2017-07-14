@@ -8,7 +8,7 @@ Before you start, read the **README.md** file for info on the project and how to
 
 ### Check out the roadmap
 
-In the **README.md** I have added some bullet points of funcionalities I have in mind adding to the boilerplate. If you have something completely different in mind thats also OK, but preferably create a ticket so that I know what you are up to. This prevents merging conflicts later on!
+In the **README.md** I have added some bullet points of funcionalities I have in mind adding to the Launchpad. If you have something completely different in mind thats also OK, but preferably create a ticket so that I know what you are up to. This prevents merging conflicts later on!
 
 ### Filing issues
 

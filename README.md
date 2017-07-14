@@ -1,5 +1,5 @@
-![Boilerplate](/build/screenshot.png)
-> A boilerplate for Electron using React and Webpack. Which also contains components and a basic layout to quick-start creating an application.
+![Launchpad](/build/screenshot.png)
+> A quick-start project for Electron using React and Webpack. Which also contains components and a basic layout to start creating an application.
 
 [![Code Climate](https://codeclimate.com/github/taurgis/electron-react-boilerplate/badges/gpa.svg)](https://codeclimate.com/github/taurgis/electron-react-boilerplate)
 [![Build Status](https://travis-ci.org/taurgis/electron-react-boilerplate.svg?branch=master)](https://travis-ci.org/taurgis/electron-react-boilerplate)
@@ -7,7 +7,9 @@
 
 ## Under Development
 
-Currently this boilerplate is still under development and is also my personal "learning platform" for both Electron, Webpack and React. So take into consideration that not all code will be optimized and there will be structural changes constantly as I learn the ropes.
+Currently this project is still under development and is also my personal "learning platform" for both Electron, Webpack and React. So take into consideration that not all code will be optimized and there will be structural changes constantly as I learn the ropes.
+
+The main purpose of this project is to provide a base app to start creating other applications quickly, a sort of "solid base" to start out with.
 
 ### TO-DO
   - [x] Runnable app
