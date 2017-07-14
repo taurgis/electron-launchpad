@@ -1,2 +1,17 @@
+engines:
+  rubocop:
+    enabled: false
+  brakeman:
+    enabled: false
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby: false
+      - javascript: true
 exclude_paths:
 - "docs/**"
