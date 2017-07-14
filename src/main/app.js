@@ -3,8 +3,7 @@
 
 import {
   app,
-  Menu,
-  BrowserWindow
+  Menu
 } from 'electron';
 
 import {
@@ -15,14 +14,9 @@ import {
   setupWindows
 } from './windows';
 
-import {
-  loadFile
-} from './lib/files';
-
 import menuTemplate from './config/menu';
 
 const windowManager = getWindowManager();
-let mainWindow = null;
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();

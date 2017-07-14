@@ -42,12 +42,7 @@ function showOpenDialog(focusedWindow) {
  * @param {BrowserWindow} win
  */
 export function loadFile(filePath, win, isNew = false) {
-  const payload = {
-    type: 'LogFile',
-    path: normalizePath(filePath),
-    isNew
-  };
-  if (path.extname(filePath).toLowerCase() !== '.bcup') {
+  if (path.extname(filePath).toLowerCase() !== '.log') {
     return;
   }
   if (!win) {
@@ -73,22 +68,4 @@ export function openFile(focusedWindow) {
     return;
   }
   showOpenDialog(focusedWindow);
-}
-
-/**
- * Create a new file and open it.
- * then ask the user for a password
- *
- * @param {BrowserWindow} focusedWindow
- * @returns {void}
- */
-export function newFile(focusedWindow) {
-  if (!focusedWindow) {
-    focusedWindow = BrowserWindow.getFocusedWindow();
-  }
-  if (!focusedWindow) {
-    windowManager.buildWindowOfType('main', win => showSaveDialog(win));
-    return;
-  }
-  showSaveDialog(focusedWindow);
 }

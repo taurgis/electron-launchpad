@@ -1,4 +1,3 @@
-import { spy } from 'sinon';
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 

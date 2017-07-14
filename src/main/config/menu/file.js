@@ -2,7 +2,7 @@ import {
   getWindowManager
 } from '../../lib/window-manager';
 import {
-  openFile, openFileForImporting, newFile
+  openFile
 } from '../../lib/files';
 
 const windowManager = getWindowManager();
