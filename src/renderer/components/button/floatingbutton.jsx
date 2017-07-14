@@ -5,16 +5,16 @@ import classNames from 'classnames';
 import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The Button component (MaterializeCSS project)
+ * @desc The FloatingButton component (MaterializeCSS project)
  * @example An example can be found here: http://materializecss.com/buttons.html
- *          import RaisedButton from './components/raisedbutton'
- *          <RaisedButton>Button text</RaisedButton>
+ *          import Button from './components/floatingbutton'
+ *          <FloatingButton>Button text</FloatingButton>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  * @property {boolean} animate - Whether or not a hover will trigger an animation
  * @property {function} onClick - The onclick event
  */
-const RaisedButton = class RaisedButton extends React.Component {
+const FloatingButton = class FloatingButton extends React.Component {
     constructor(props) {
         super(props);
 
@@ -25,18 +25,18 @@ const RaisedButton = class RaisedButton extends React.Component {
 
     render() {
         return (
-            <button className={classNames(materialize.btn, this.props.className, this.wavesAnimation)} onClick={this.props.onClick}>
+            <button className={classNames(materialize['btn-floating'], this.props.className, this.wavesAnimation)} onClick={this.props.onClick}>
                 {this.props.children}
             </button>
         )
     }
 };
 
-RaisedButton.propTypes = {
+FloatingButton.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     animate: PropTypes.bool,
     onClick: PropTypes.func
 };
 
-export default RaisedButton;
+export default FloatingButton;

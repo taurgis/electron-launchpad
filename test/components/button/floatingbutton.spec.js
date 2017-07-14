@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 
-import RaisedButton from '../../../src/renderer/components/button/raisedbutton'
+import FloatingButton from '../../../src/renderer/components/button/floatingbutton'
 
 function testFunction() {
     // DO NOTHING
@@ -10,7 +10,7 @@ function testFunction() {
 }
 
 function setupStandard() {
-    const renderer = ReactTestRenderer.create(<RaisedButton onClick={testFunction} className='testClass'>Test button text</RaisedButton>);
+    const renderer = ReactTestRenderer.create(<FloatingButton onClick={testFunction} className='testClass'>Test button text</FloatingButton>);
     const component = renderer.toJSON();
 
     return {
@@ -18,15 +18,15 @@ function setupStandard() {
     };
 }
 
-describe('Button - RaisedButton component', () => {
+describe('Button - FloatingButton component', () => {
     it('should be of type button', () => {
         const { component } = setupStandard();
         expect(component.type).toBe('button');
     });
 
-    it('should have only the classes "btn" and "testClass"', () => {
+    it('should have only the classes "btn-floating" and "testClass"', () => {
         const { component } = setupStandard();
-        expect(component.props.className).toBe('btn testClass');
+        expect(component.props.className).toBe('btn-floating testClass');
     });
 
     it('should have an onClick function', () => {

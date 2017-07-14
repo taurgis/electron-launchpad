@@ -9,14 +9,7 @@ html {
 
 main {
   margin-left: 10px;
-
-  &.lp300 {
-    padding-left: 300px;
-  }
-
-  &.lp100 {
-    padding-left: 100px;
-  }
+  padding-left: 100px;
 }
 
 .appContainer {
@@ -36,15 +29,4 @@ main {
 .noFloat {
   display: table;
   float: none;
-}
-@media only screen and (min-width: 992px) {
-  main {
-    padding-left: 300px;
-  }
-}
-@media only screen and (max-width: 992px) {
-  main.lp100,
-  main.lp300 {
-    padding-left: 100px;
-  }
 }

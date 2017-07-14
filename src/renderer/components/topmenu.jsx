@@ -12,13 +12,6 @@ const TopMenu = class TopMenu extends React.Component {
     return (
       <nav className={topmenu['lp' + this.props.mainSizePadding]}>
         <div className={materialize['nav-wrapper']}>
-          <ul className={classNames(materialize['left'], materialize['hide-on-med-and-down'])}>
-            <li>
-              <a href="#" onClick={this.props.switchLeftMenuSize} className={topmenu.leftMenuSizer}>
-                <FaIcon code='list' color='#fff' container="span"/>
-              </a>
-            </li>
-          </ul>
           <ul className={classNames(materialize['hide-on-med-and-down'])}>
             <li>
               <a href="#">

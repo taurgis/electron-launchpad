@@ -2,7 +2,7 @@
 
 exports[`FaIcon component Matches/Renders a snapshot 1`] = `
 <i
-  className="fa fa-home"
+  className="fa fa-home testClass"
   style={
     Object {
       "color": "#fff",

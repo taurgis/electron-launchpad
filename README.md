@@ -23,9 +23,11 @@ The main purpose of this project is to provide a base app to start creating othe
   - [x] Styled top menu
   - [x] Card components  
   - [x] Card-panel component
-  - [ ] Button components
+  - [x] Button components
+  - [ ] Collections
   - [ ] Graphs
   - [ ] Forms
+  - [ ] Add jQuery for more fancy stuff in Materialize
   - [X] Multiple pages
 
 ### Install Dependencies & Run

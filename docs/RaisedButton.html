@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: CardImage</title>
+    <title>JSDoc: Class: RaisedButton</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: CardImage</h1>
+    <h1 class="page-title">Class: RaisedButton</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2>CardImage</h2>
+        <h2>RaisedButton</h2>
         
     
 </header>
@@ -40,14 +40,14 @@
 
     
 
-    <h4 class="name" id="CardImage"><span class="type-signature"></span>new CardImage<span class="signature">(props)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="RaisedButton"><span class="type-signature"></span>new RaisedButton<span class="signature">(props)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    The CardImage component, an optional part the Card component (MaterializeCSS project)
+    The Button component (MaterializeCSS project)
 </div>
 
 
@@ -137,7 +137,7 @@
 
         <tr>
             
-                <td class="name"><code>image</code></td>
+                <td class="name"><code>className</code></td>
             
 
             <td class="type">
@@ -153,20 +153,20 @@
 
             
 
-            <td class="description last">The image URL</td>
+            <td class="description last">Additional classes for the component</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>title</code></td>
+                <td class="name"><code>animate</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">boolean</span>
 
 
             
@@ -176,7 +176,30 @@
 
             
 
-            <td class="description last">The title to appear on the image</td>
+            <td class="description last">Whether or not a hover will trigger an animation</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onClick</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The onclick event</td>
         </tr>
 
     
@@ -215,7 +238,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="renderer_components_card_cardimage.jsx.html">renderer/components/card/cardimage.jsx</a>, <a href="renderer_components_card_cardimage.jsx.html#line18">line 18</a>
+        <a href="renderer_components_button_raisedbutton.jsx.html">renderer/components/button/raisedbutton.jsx</a>, <a href="renderer_components_button_raisedbutton.jsx.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -242,11 +265,9 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/cards.html
-         import { Card, CardImage } from './components/card'
-         &lt;Card>
-            &lt;CardImage image='http://.../image.jpg' title='My image title' />
-         &lt;/Card>    </code></pre>
+    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/buttons.html
+         import RaisedButton from './components/raisedbutton'
+         &lt;RaisedButton>Button text&lt;/RaisedButton></code></pre>
 
 
 

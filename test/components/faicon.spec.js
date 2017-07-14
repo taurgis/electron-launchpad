@@ -6,7 +6,7 @@ import FaIcon from '../../src/renderer/components/faicon.jsx'
 function setupStandard() {
   const standardRenderer = new ReactShallowRenderer();
 
-  standardRenderer.render(<FaIcon code='home' color='#fff' />);
+  standardRenderer.render(<FaIcon code='home' color='#fff' className='testClass' />);
   const component = standardRenderer.getRenderOutput();
 
   return {
@@ -36,9 +36,9 @@ describe('FaIcon component', () => {
     expect(component.props.children).toBe(undefined);
   });
 
-  it('classes should be "fa fa-home"', () => {
+  it('classes should be "fa fa-home testClass"', () => {
     const { component } = setupStandard();
-    expect(component.props.className).toBe("fa fa-home");
+    expect(component.props.className).toBe("fa fa-home testClass");
   });
 
   it('color should be #fff', () => {

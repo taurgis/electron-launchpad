@@ -2,8 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
+import { RaisedButton, FloatingButton } from '../components/button'
 import CardPanel from '../components/cardpanel.jsx'
 import FaIcon from '../components/faicon.jsx';
+import Breadcrumb from '../components/breadcrumb'
 
 import materialize from '../styles/vendor/materialize.scss';
 import dashboard from '../styles/containers/dashboard.scss';
@@ -16,6 +18,7 @@ class Cards extends React.Component {
   render() {
     return (
       <div>
+        <Breadcrumb path='Components' />
         <div className={materialize.row}>
           <div className={classNames(materialize.col, materialize.s11, materialize['offset-l1'])}>
             <h2 className={materialize.header}>Card examples</h2>
@@ -71,6 +74,21 @@ class Cards extends React.Component {
                 I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
               </span>
             </CardPanel>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s11, materialize['offset-l1'])}>
+            <h2 className={materialize.header}>Button examples</h2>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s2, materialize.l2, materialize['offset-l1'])}>
+            <p><RaisedButton animate={true} onClick={this.showAlertBox}>A button</RaisedButton></p>
+            <p><RaisedButton animate={true} onClick={this.showAlertBox} className={materialize.red}>A button</RaisedButton></p>
+            <p><RaisedButton animate={true} onClick={this.showAlertBox}>An icon <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
+          </div>
+          <div className={classNames(materialize.col, materialize.s2, materialize.l1)}>
+            <FloatingButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FloatingButton>
           </div>
         </div>
       </div>

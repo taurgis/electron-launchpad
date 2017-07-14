@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button - RaisedButton component Matches/Renders a snapshot 1`] = `
-<a
+<button
   className="btn testClass"
   onClick={[Function]}
 >
   Test button text
-</a>
+</button>
 `;
