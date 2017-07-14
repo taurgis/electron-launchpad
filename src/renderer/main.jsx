@@ -11,7 +11,7 @@ import Breadcrumb from './components/breadcrumb.jsx'
 import FaIcon from './components/faicon.jsx';
 
 import Dashboard from './containers/dashboard.jsx'
-import Cards from './containers/cards.jsx'
+import Components from './containers/components.jsx'
 
 class Main extends React.Component {
 
@@ -42,7 +42,7 @@ class Main extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to={'/cards'}>
+                <Link to={'/components'}>
                   <FaIcon code='recycle' size={1} color='#fff' />
                   <span>Components</span>
                 </Link>
@@ -60,7 +60,7 @@ class Main extends React.Component {
           <main className={main['lp' + this.state.mainSizePadding]}>
             <Breadcrumb path={this.state.path} />
             <Route path={loadingLocation} exact={true} component={Dashboard} />
-            <Route path='/cards' component={Cards} />
+            <Route path='/components' component={Components} />
           </main>
 
         </div>

@@ -18,8 +18,8 @@ Currently this boilerplate is still under development and is also my personal "l
   - [x] Splash screen for loading (just for show)
   - [x] Styled left menu
   - [x] Styled top menu
-  - [X] Card components  
-  - [ ] Card-panel component
+  - [x] Card components  
+  - [x] Card-panel component
   - [ ] Button components
   - [ ] Graphs
   - [ ] Forms
