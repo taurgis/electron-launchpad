@@ -11,6 +11,7 @@ Currently this boilerplate is still under development and is also my personal "l
 
 ### TO-DO
   - [x] Runnable app
+  - [x] Working application / window icons
   - [x] Running Webpack
   - [X] Automatic documentation generation using Webpack
   - [x] Build for Linux (DEB & RPM), Windows & Mac

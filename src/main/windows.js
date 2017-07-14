@@ -18,6 +18,7 @@ export function setupWindows() {
       show: false,
       frame: false,
       resizable: false,
+      icon: __dirname + '/../../build/icon.png',
       ...options
     });
 
@@ -38,6 +39,7 @@ export function setupWindows() {
       minWidth: 680,
       minHeight: 500,
       title: app.getName(),
+      icon: __dirname + '/../../build/icon.png',
       titleBarStyle: 'hidden-inset',
       show: process.env.NODE_ENV === 'development',
       vibrancy: 'light'

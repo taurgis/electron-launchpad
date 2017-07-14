@@ -23,7 +23,7 @@
   },
   "build": {
     "appId": "eu.thomastheunen.electronreactboilerplate",
-    "copyright": "Copyright © 2015-2017 Thomas Theunen",
+    "copyright": "Copyright © 2017 Thomas Theunen",
     "mac": {
       "category": "public.app-category.productivity"
     },
@@ -62,7 +62,7 @@
     "fileAssociations": {
       "ext": ".txt",
       "name": "Sample file association",
-      "icon": "./build/logo.ico"
+      "icon": "./build/icon.icns"
     },
     "directories": {
       "output": "release"
