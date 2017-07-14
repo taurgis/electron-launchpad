@@ -1,24 +1,26 @@
 const {
   join
 } = require('path');
+const path = require('path');
+var JsDocPlugin = require('jsdoc-webpack-plugin-v2');
 
 module.exports = {
   module: {
     rules: [{
-        test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
-        include: [
-          join(__dirname, '../src'),
-        ],
-        query: {
-          presets: ['es2015', 'react']
-        }
-      },
-      {
-        test: /\.(svg|png|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        exclude: /node_modules/
+      test: /\.(js|jsx)$/,
+      loader: 'babel-loader',
+      include: [
+        join(__dirname, '../src'),
+      ],
+      query: {
+        presets: ['es2015', 'react']
       }
+    },
+    {
+      test: /\.(svg|png|ttf|woff|woff2)$/,
+      loader: 'file-loader',
+      exclude: /node_modules/
+    }
     ],
   },
   output: {
@@ -29,5 +31,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
   },
-  plugins: []
+  plugins: [new JsDocPlugin({
+    conf: path.join(__dirname, 'jsdoc.json'),
+  })]
 };

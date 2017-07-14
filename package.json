@@ -210,6 +210,7 @@
   },
   "dependencies": {
     "is-electron-renderer": "^2.0.1",
+    "jsdoc-webpack-plugin-v2": "^2.0.2",
     "react-chartjs": "^0.8.0"
   }
 }

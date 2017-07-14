@@ -12,6 +12,7 @@ Currently this boilerplate is still under development and is also my personal "l
 ### TO-DO
   - [x] Runnable app
   - [x] Running Webpack
+  - [X] Automatic documentation generation using Webpack
   - [x] Build for Linux (DEB & RPM), Windows & Mac
   - [x] Testing system in place
   - [x] Splash screen for loading (just for show)

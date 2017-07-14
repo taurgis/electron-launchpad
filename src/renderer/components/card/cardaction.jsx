@@ -4,6 +4,16 @@ import classNames from 'classnames';
 
 import materialize from '../../styles/vendor/materialize.scss';
 
+/**
+ * @desc The CardStacked component, an optional part the Card component (MaterializeCSS project)
+ * @example An example can be found here: http://materializecss.com/cards.html
+ *          import { Card, CardAction } from './components/card'
+ *          <Card>
+ *             <CardAction actions={[{ title: 'link 1', url: 'link url 1' }]}/>
+ *          </Card>  
+ * @param {*} props - React property object
+ * @property {array} props.actions - Array of JSON objects
+ */
 const CardAction = class CardAction extends React.Component {
     constructor(props) {
         super(props);

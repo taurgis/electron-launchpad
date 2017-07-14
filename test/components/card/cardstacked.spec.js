@@ -2,10 +2,10 @@ import { spy } from 'sinon';
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 
-import Card from '../../../src/renderer/components/card/card.jsx'
+import CardStacked from '../../../src/renderer/components/card/cardstacked.jsx'
 
 function setupStandard() {
-    const renderer = ReactTestRenderer.create(<Card top-border-color='red' className='testClass'>Test card content</Card>);
+    const renderer = ReactTestRenderer.create(<CardStacked>Test content</CardStacked>);
     const component = renderer.toJSON();
 
     return {
@@ -13,20 +13,20 @@ function setupStandard() {
     };
 }
 
-describe('Card component', () => {
-    it('should be of type span', () => {
+describe('Card - Card stacked component', () => {
+    it('should be of type div', () => {
         const { component } = setupStandard();
         expect(component.type).toBe('div');
     });
 
-    it('should have only the classes "card" and "testClass"', () => {
+    it('should have only the class "card-stacked"', () => {
         const { component } = setupStandard();
-        expect(component.props.className).toBe('card testClass');
+        expect(component.props.className).toBe('card-stacked');
     });
 
-    it('children should be the text "Test card content"', () => {
+    it('children should be the text "Test content"', () => {
         const { component } = setupStandard();
-        expect(component.children[0]).toBe('Test card content');
+        expect(component.children[0]).toBe('Test content');
     });
 
     it('Matches/Renders a snapshot', () => {

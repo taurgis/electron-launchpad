@@ -1,0 +1,12 @@
+{
+    "source": {
+        "include": "../src",
+        "includePattern": ".+\\.js(doc|x)?$"
+    },
+    "recurseDepth": 30,
+    "opts": {
+        "encoding": "utf8", 
+        "destination": "../docs/", 
+        "recurse": true 
+    }
+}

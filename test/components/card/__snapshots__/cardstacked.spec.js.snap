@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card - Card stacked component Matches/Renders a snapshot 1`] = `
+<div
+  className="card-stacked"
+>
+  Test content
+</div>
+`;
