@@ -2,7 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
-import FaIcon from '../components/faicon.jsx';
+import { RaisedButton } from '../components/button'
+import FaIcon from '../components/faicon';
 
 import materialize from '../styles/vendor/materialize.scss';
 import dashboard from '../styles/containers/dashboard.scss';
@@ -10,6 +11,10 @@ import dashboard from '../styles/containers/dashboard.scss';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  showAlertBox() {
+    alert('I clicked something');
   }
 
   render() {
@@ -54,6 +59,11 @@ class Dashboard extends React.Component {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s6, materialize.l3, materialize['offset-l1'])}>
+            <RaisedButton animate={true} onClick={this.showAlertBox}>Test</RaisedButton>
           </div>
         </div>
       </div>

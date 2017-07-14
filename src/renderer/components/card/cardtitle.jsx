@@ -14,8 +14,7 @@ import materialize from '../../styles/vendor/materialize.scss';
  *             </CardTitle>
  *          </Card>    
  * @param {*} props - React property object
- * @property {string} image - The image URL
- * @property {string} title - The title to appear on the image
+ * @property {string} className - Additional classes for the component
  */
 const CardTitle = class CardTitle extends React.Component {
     constructor(props) {
@@ -33,6 +32,7 @@ const CardTitle = class CardTitle extends React.Component {
 
 CardTitle.propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string
 };
 
 export default CardTitle;

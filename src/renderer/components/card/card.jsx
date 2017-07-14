@@ -13,6 +13,7 @@ import card from '../../styles/components/card.scss';
  *            {your content}
  *          </Card>    
  * @param {*} props - React property object
+ * @property {string} className - Additional classes for the component
  */
 const Card = class Card extends React.Component {
   constructor(props) {

@@ -36,7 +36,7 @@ class Main extends React.Component {
                 <img className={leftmenu.brandLogo} src='images/logo.svg' />
               </li>
               <li>
-                <Link to={loadingLocation}>
+                <Link to={loadingLocation}> 
                   <FaIcon code='dashboard' size={1} color='#fff' />
                   <span>Dashboard</span>
                 </Link>
