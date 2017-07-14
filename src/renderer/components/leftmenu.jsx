@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-import FaIcon from '../components/faicon.jsx';
+import FaIcon from '../components/faicon';
 
 import materialize from '../styles/vendor/materialize.scss';
 import leftmenu from '../styles/components/leftmenu.scss';

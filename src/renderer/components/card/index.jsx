@@ -1,8 +1,8 @@
 import Card from './card'
-import CardTitle from './cardtitle.jsx'
-import CardStacked from './cardstacked.jsx'
-import CardImage from './cardimage.jsx'
-import CardContent from './cardcontent.jsx'
-import CardAction from './cardaction.jsx'
+import CardTitle from './cardtitle'
+import CardStacked from './cardstacked'
+import CardImage from './cardimage'
+import CardContent from './cardcontent'
+import CardAction from './cardaction'
 
 export { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction }

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import FaIcon from '../components/faicon.jsx';
+import FaIcon from '../components/faicon';
 
 import materialize from '../styles/vendor/materialize.scss';
 import topmenu from '../styles/components/topmenu.scss';

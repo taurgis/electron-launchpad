@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-import FaIcon from './faicon.jsx'
+import FaIcon from './faicon'
 
 import materialize from '../styles/vendor/materialize.scss';
 import breadcrumb from '../styles/components/breadcrumb.scss';
