@@ -18,10 +18,12 @@ Currently this boilerplate is still under development and is also my personal "l
   - [x] Splash screen for loading (just for show)
   - [x] Styled left menu
   - [x] Styled top menu
-  - [ ] Panel components
+  - [X] Card components  
+  - [ ] Card-panel component
+  - [ ] Button components
   - [ ] Graphs
   - [ ] Forms
-  - [ ] Multiple pages
+  - [X] Multiple pages
 
 ### Install Dependencies & Run
 
