@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
-import { RaisedButton, FloatingButton } from '../components/button'
+import { RaisedButton, FloatingButton, FixedButton } from '../components/button'
 import CardPanel from '../components/cardpanel.jsx'
 import FaIcon from '../components/faicon.jsx';
 import Breadcrumb from '../components/breadcrumb'
@@ -13,6 +13,10 @@ import dashboard from '../styles/containers/dashboard.scss';
 class Cards extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  showAlertBox() {
+    alert('I clicked something');
   }
 
   render() {
@@ -86,9 +90,11 @@ class Cards extends React.Component {
             <p><RaisedButton animate={true} onClick={this.showAlertBox}>A button</RaisedButton></p>
             <p><RaisedButton animate={true} onClick={this.showAlertBox} className={materialize.red}>A button</RaisedButton></p>
             <p><RaisedButton animate={true} onClick={this.showAlertBox}>An icon <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
+            <p><RaisedButton animate={true} onClick={this.showAlertBox} className={materialize.disabled}>disabled <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
           </div>
           <div className={classNames(materialize.col, materialize.s2, materialize.l1)}>
             <FloatingButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FloatingButton>
+            <FixedButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FixedButton>
           </div>
         </div>
       </div>

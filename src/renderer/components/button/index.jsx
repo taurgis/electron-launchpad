@@ -1,3 +1,4 @@
 import RaisedButton from './raisedbutton'
 import FloatingButton from './floatingbutton'
-export { RaisedButton, FloatingButton }
+import FixedButton from './fixedbutton'
+export { RaisedButton, FloatingButton, FixedButton }

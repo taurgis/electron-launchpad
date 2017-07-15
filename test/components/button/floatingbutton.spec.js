@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
-
 import FloatingButton from '../../../src/renderer/components/button/floatingbutton'
 
 function testFunction() {

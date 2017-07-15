@@ -1,21 +1,18 @@
 .side-nav {
-  background-color: #353541;
-  width: 50px!important;
-
-  .brandLogo {
-    width: 100%;
-    padding: 3px;
-  }
-
-  li a,
-  li i.whiteIcon {
-    color: #fff;
-    font-size: 30px;
-  }
-
-  li {
-    a {
-      padding: 0 10px;
+    background-color: #353541;
+    width: 50px!important;
+    .brandLogo {
+        width: 100%;
+        padding: 3px;
     }
-  }
+    li a,
+    li i.whiteIcon {
+        color: #fff;
+        font-size: 30px;
+    }
+    li {
+        a {
+            padding: 0 10px;
+        }
+    }
 }

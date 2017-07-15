@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: CardContent</title>
+    <title>JSDoc: Class: FixedButton</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: CardContent</h1>
+    <h1 class="page-title">Class: FixedButton</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2>CardContent</h2>
+        <h2>FixedButton</h2>
         
     
 </header>
@@ -40,14 +40,14 @@
 
     
 
-    <h4 class="name" id="CardContent"><span class="type-signature"></span>new CardContent<span class="signature">(props)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="FixedButton"><span class="type-signature"></span>new FixedButton<span class="signature">(props)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    The CardContent component, an optional part the card component (MaterializeCSS project)
+    The FixedButton component (MaterializeCSS project)
 </div>
 
 
@@ -111,6 +111,104 @@
 
 
 
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>className</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Additional classes for the component</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>animate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether or not a hover will trigger an animation</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onClick</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The onclick event</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
 <dl class="details">
 
     
@@ -140,7 +238,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="renderer_components_card_cardcontent.jsx.html">renderer/components/card/cardcontent.jsx</a>, <a href="renderer_components_card_cardcontent.jsx.html#line18">line 18</a>
+        <a href="renderer_components_button_fixedbutton.jsx.html">renderer/components/button/fixedbutton.jsx</a>, <a href="renderer_components_button_fixedbutton.jsx.html#line19">line 19</a>
     </li></ul></dd>
     
 
@@ -167,13 +265,9 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/cards.html
-         import { Card, CardContent } from './components/card'
-         &lt;Card>
-            &lt;CardContent>
-               {Your HTML}
-            &lt;/CardContent>
-         &lt;/Card>    </code></pre>
+    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/buttons.html
+         import Button from './components/fixedbutton'
+         &lt;FixedButton>Button text&lt;/FixedButton></code></pre>
 
 
 

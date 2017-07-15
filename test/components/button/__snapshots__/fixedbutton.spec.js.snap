@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button - FixedButton component Matches/Renders a snapshot 1`] = `
+<div
+  className="fixed-action-btn"
+>
+  <button
+    className="btn-floating testClass"
+    onClick={[Function]}
+  >
+    Test button text
+  </button>
+</div>
+`;

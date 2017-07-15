@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: renderer/components/cardpanel.jsx</title>
+    <title>JSDoc: Source: renderer/components/button/fixedbutton.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: renderer/components/cardpanel.jsx</h1>
+    <h1 class="page-title">Source: renderer/components/button/fixedbutton.jsx</h1>
 
     
 
@@ -30,38 +30,44 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import materialize from '../styles/vendor/materialize.scss';
+import FloatingButton from './floatingbutton'
+
+import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The CardPanel component (MaterializeCSS project)
- * @example An example can be found here: http://materializecss.com/cards.html
- *          import CardPanel from './components/cardpanel.jsx'
- *          &lt;CardPanel className='teal'>
- *            {your content}
- *          &lt;/CardPanel>    
+ * @desc The FixedButton component (MaterializeCSS project)
+ * @example An example can be found here: http://materializecss.com/buttons.html
+ *          import Button from './components/fixedbutton'
+ *          &lt;FixedButton>Button text&lt;/FixedButton>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
+ * @property {boolean} animate - Whether or not a hover will trigger an animation
+ * @property {function} onClick - The onclick event
  */
-const CardPanel = class CardPanel extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const FixedButton = class FixedButton extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-  render() {
-    return (
-      &lt;div className={classNames(materialize['card-panel'], this.props.className)}>
-        {this.props.children}
-      &lt;/div>
-    )
-  }
+    render() {
+        return (
+            &lt;div className={materialize['fixed-action-btn']}>
+                &lt;FloatingButton className={this.props.className} animate={this.props.animate} onClick={this.props.onClick}>
+                    {this.props.children}
+                &lt;/FloatingButton>
+            &lt;/div>
+        )
+    }
 };
 
-CardPanel.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string
+FixedButton.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    animate: PropTypes.bool,
+    onClick: PropTypes.func
 };
 
-export default CardPanel;
+export default FixedButton;
 </code></pre>
         </article>
     </section>
