@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: renderer/components/card/cardimage.jsx</title>
+    <title>JSDoc: Source: renderer/components/collection/collection.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: renderer/components/card/cardimage.jsx</h1>
+    <h1 class="page-title">Source: renderer/components/collection/collection.jsx</h1>
 
     
 
@@ -33,44 +33,35 @@ import classNames from 'classnames';
 import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The CardImage component, an optional part the Card component (MaterializeCSS project)
- * @example An example can be found here: http://materializecss.com/cards.html
- *          import { Card, CardImage } from './components/card'
- *          &lt;Card>
- *             &lt;CardImage image='http://.../image.jpg' title='My image title' />
- *          &lt;/Card>    
+ * @desc The Collection component (MaterializeCSS project)
+ * @example An example can be found here: http://materializecss.com/collections.html
+ *          import { Collection } from './components/collection'
+ *          &lt;Collection>
+ *            {your content (li)}
+ *          &lt;/Collection>    
  * @param {*} props - React property object
- * @property {string} image - The image URL
- * @property {string} title - The title to appear on the image
+ * @property {string} className - Additional classes for the component
  */
-const CardImage = class CardImage extends React.Component {
+const Collection = class Collection extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            &lt;div className={materialize['card-image']}>
-                &lt;img src={this.props.image} />
-                &lt;span className={materialize['card-title']}>{this.props.title}&lt;/span>
+            &lt;ul className={classNames(materialize.collection, this.props.className)}>
                 {this.props.children}
-            &lt;/div>
+            &lt;/ul>
         )
     }
 };
 
-CardImage.propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-        PropTypes.node
-    ]),
-
+Collection.propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string
 };
 
-export default CardImage;
+export default Collection;
 </code></pre>
         </article>
     </section>

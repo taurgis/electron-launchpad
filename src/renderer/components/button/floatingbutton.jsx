@@ -7,7 +7,7 @@ import materialize from '../../styles/vendor/materialize.scss';
 /**
  * @desc The FloatingButton component (MaterializeCSS project)
  * @example An example can be found here: http://materializecss.com/buttons.html
- *          import Button from './components/floatingbutton'
+ *          import FloatingButton from './components/floatingbutton'
  *          <FloatingButton>Button text</FloatingButton>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component

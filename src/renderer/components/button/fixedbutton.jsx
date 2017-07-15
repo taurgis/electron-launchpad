@@ -9,7 +9,7 @@ import materialize from '../../styles/vendor/materialize.scss';
 /**
  * @desc The FixedButton component (MaterializeCSS project)
  * @example An example can be found here: http://materializecss.com/buttons.html
- *          import Button from './components/fixedbutton'
+ *          import FixedButton from './components/fixedbutton'
  *          <FixedButton>Button text</FixedButton>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
