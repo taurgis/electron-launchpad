@@ -27,6 +27,7 @@ The main purpose of this project is to provide a base app to start creating othe
   - [ ] Collections
   - [ ] Graphs
   - [ ] Forms
+  - [ ] Open text file
   - [ ] Replace jQuery functions used in materialize
   - [X] Multiple pages
 
