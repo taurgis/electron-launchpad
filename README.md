@@ -2,8 +2,7 @@
 > A quick-start project for Electron using React and Webpack. Which also contains components and a basic layout to start creating an application.
 
 [![Code Climate](https://codeclimate.com/github/taurgis/electron-react-boilerplate/badges/gpa.svg)](https://codeclimate.com/github/taurgis/electron-react-boilerplate)
-[![Build Status](https://travis-ci.org/taurgis/electron-react-boilerplate.svg?branch=master)](https://travis-ci.org/taurgis/electron-react-boilerplate)
-[![Build status](https://ci.appveyor.com/api/projects/status/github/taurgis/electron-react-boilerplate)](https://ci.appveyor.com/project/taurgis/electron-react-boilerplate/branch/master)
+[[![Build Status](https://travis-ci.org/taurgis/electron-launchpad.svg?branch=master)](https://travis-ci.org/taurgis/electron-launchpad)[![Build status](https://ci.appveyor.com/api/projects/status/github/taurgis/electron-react-boilerplate)](https://ci.appveyor.com/project/taurgis/electron-react-boilerplate/branch/master)
 
 ## Under Development
 
