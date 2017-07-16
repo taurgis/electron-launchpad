@@ -25,7 +25,7 @@ The main purpose of this project is to provide a base app to start creating othe
   - [x] Card-panel component
   - [x] Button components
   - [x] Collections
-  - [ ] Graphs
+  - [x] Charts
   - [ ] Forms
   - [ ] Open text file
   - [ ] Replace jQuery functions used in materialize

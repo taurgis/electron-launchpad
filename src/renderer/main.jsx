@@ -6,13 +6,13 @@ import materialize from './styles/vendor/materialize.scss';
 import main from './styles/main.scss';
 import leftmenu from './styles/components/leftmenu.scss';
 
-import LeftMenu from './components/leftmenu.jsx'
-import TopMenu from './components/topmenu.jsx'
-import FaIcon from './components/faicon.jsx';
+import LeftMenu from './components/leftmenu'
+import TopMenu from './components/topmenu'
+import FaIcon from './components/faicon';
 
-import Dashboard from './containers/dashboard.jsx'
-import Components from './containers/components.jsx'
-
+import Dashboard from './containers/dashboard'
+import Components from './containers/components'
+import Charts from './containers/charts'
 
 class Main extends React.Component {
 
@@ -43,9 +43,9 @@ class Main extends React.Component {
                 </Link>
               </li>
               <li>
-                <a href='#'>
-                  <FaIcon code='address-book-o' size={1} color='#fff' />
-                </a>
+                <Link to={'/charts'} >
+                  <FaIcon code='bar-chart' size={1} color='#fff' />
+                </Link>
               </li>
             </LeftMenu>
             <TopMenu />
@@ -54,6 +54,7 @@ class Main extends React.Component {
           <main>
             <Route path={loadingLocation} exact={true} component={Dashboard} />
             <Route path='/components' component={Components} />
+            <Route path='/charts' component={Charts} />
           </main>
 
         </div>
