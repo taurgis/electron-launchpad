@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 
-import Collection from '../../../src/renderer/components/collection/collection.jsx'
+import Collection from '../../../src/renderer/components/collection/collection'
 
 function setupStandard() {
     const renderer = ReactTestRenderer.create(<Collection className='testClass'>Test collection content</Collection>);

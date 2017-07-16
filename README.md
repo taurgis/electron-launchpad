@@ -24,7 +24,7 @@ The main purpose of this project is to provide a base app to start creating othe
   - [x] Card components  
   - [x] Card-panel component
   - [x] Button components
-  - [ ] Collections
+  - [x] Collections
   - [ ] Graphs
   - [ ] Forms
   - [ ] Open text file

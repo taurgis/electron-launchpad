@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 
-import CollectionItem from '../../../src/renderer/components/collection/collectionitem'
+import CollectionLink from '../../../src/renderer/components/collection/collectionlink'
 
 function setupStandard() {
-    const renderer = ReactTestRenderer.create(<CollectionItem className='testClass'>Test collection content</CollectionItem>);
+    const renderer = ReactTestRenderer.create(<CollectionLink url='testlink' className='testClass'>Test collection content</CollectionLink>);
     const component = renderer.toJSON();
 
     return {
@@ -12,11 +12,17 @@ function setupStandard() {
     };
 }
 
-describe('CollectionItem component', () => {
-    it('should be of type li', () => {
+describe('CollectionLink component', () => {
+    it('should be of type a', () => {
         const { component } = setupStandard();
-        expect(component.type).toBe('li');
+        expect(component.type).toBe('a');
     });
+
+    it('should link to "testlink"', () => {
+        const { component } = setupStandard();
+        expect(component.props.href).toBe('testlink');
+    });
+
 
     it('should have only the classes "collection-item" and "testClass"', () => {
         const { component } = setupStandard();

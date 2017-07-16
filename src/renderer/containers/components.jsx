@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
 import { RaisedButton, FloatingButton, FixedButton } from '../components/button'
+import { Collection, CollectionItem, CollectionHeader, CollectionLink } from '../components/collection'
 import CardPanel from '../components/cardpanel.jsx'
 import FaIcon from '../components/faicon.jsx';
 import Breadcrumb from '../components/breadcrumb'
@@ -95,6 +96,28 @@ class Cards extends React.Component {
           <div className={classNames(materialize.col, materialize.s2, materialize.l1)}>
             <FloatingButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FloatingButton>
             <FixedButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FixedButton>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s11, materialize['offset-l1'])}>
+            <h2 className={materialize.header}>Collection examples</h2>
+          </div>
+        </div>
+        <div className={materialize.row}>
+          <div className={classNames(materialize.col, materialize.s10, materialize['offset-l1'])}>
+            <Collection className={materialize['with-header']}>
+              <CollectionHeader>Header</CollectionHeader>
+              <CollectionItem>Collection Item</CollectionItem>
+              <CollectionLink onClick={this.showAlertBox}>This is a link collection item</CollectionLink>
+              <CollectionItem className={materialize.avatar}>
+                <FaIcon className={materialize.circle} code="folder" />
+                <span className={materialize.title}>Title</span>
+                <p>First Line <br />
+                  Second Line
+                </p>
+                <a href="#!" className={materialize['secondary-content']}><FaIcon code='star'/></a>
+              </CollectionItem>
+            </Collection>
           </div>
         </div>
       </div>

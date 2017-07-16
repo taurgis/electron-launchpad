@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Collection</title>
+    <title>JSDoc: Class: CollectionHeader</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Collection</h1>
+    <h1 class="page-title">Class: CollectionHeader</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2>Collection</h2>
+        <h2>CollectionHeader</h2>
         
     
 </header>
@@ -40,14 +40,14 @@
 
     
 
-    <h4 class="name" id="Collection"><span class="type-signature"></span>new Collection<span class="signature">(props)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="CollectionHeader"><span class="type-signature"></span>new CollectionHeader<span class="signature">(props)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    The Collection component (MaterializeCSS project)
+    The CollectionHeader component, a part of the Collection component (MaterializeCSS project)
 </div>
 
 
@@ -157,6 +157,29 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>onClick</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Function to call when the CollectionItem is clicked</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -192,7 +215,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="renderer_components_collection_collection.jsx.html">renderer/components/collection/collection.jsx</a>, <a href="renderer_components_collection_collection.jsx.html#line17">line 17</a>
+        <a href="renderer_components_collection_collectionheader.jsx.html">renderer/components/collection/collectionheader.jsx</a>, <a href="renderer_components_collection_collectionheader.jsx.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -220,10 +243,12 @@
     <h5>Example</h5>
     
     <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/collections.html
-         import { Collection } from './components/collection'
-         &lt;Collection>
-           {your content (li)}
-         &lt;/Collection>    </code></pre>
+         import { Collection, CollectionHeader } from './components/collection'
+         &lt;Collection>             
+             &lt;CollectionHeader>
+                 {your content}
+             &lt;/CollectionHeader>    
+         &lt;/Collection</code></pre>
 
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Collection</title>
+    <title>JSDoc: Class: CollectionLink</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Collection</h1>
+    <h1 class="page-title">Class: CollectionLink</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2>Collection</h2>
+        <h2>CollectionLink</h2>
         
     
 </header>
@@ -40,14 +40,14 @@
 
     
 
-    <h4 class="name" id="Collection"><span class="type-signature"></span>new Collection<span class="signature">(props)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="CollectionLink"><span class="type-signature"></span>new CollectionLink<span class="signature">(props)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    The Collection component (MaterializeCSS project)
+    The CollectionLink component, a part of the Collection component (MaterializeCSS project)
 </div>
 
 
@@ -157,6 +157,52 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The target of the CollectionLink</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onClick</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Function to call when the CollectionItem is clicked</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -192,7 +238,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="renderer_components_collection_collection.jsx.html">renderer/components/collection/collection.jsx</a>, <a href="renderer_components_collection_collection.jsx.html#line17">line 17</a>
+        <a href="renderer_components_collection_collectionlink.jsx.html">renderer/components/collection/collectionlink.jsx</a>, <a href="renderer_components_collection_collectionlink.jsx.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -220,10 +266,12 @@
     <h5>Example</h5>
     
     <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/collections.html
-         import { Collection } from './components/collection'
-         &lt;Collection>
-           {your content (li)}
-         &lt;/Collection>    </code></pre>
+         import { Collection, CollectionLink } from './components/collection'
+         &lt;Collection>             
+             &lt;CollectionLink url="yourlink">
+                 {your content}
+             &lt;/CollectionLink>     
+         &lt;/Collection</code></pre>
 
 
 

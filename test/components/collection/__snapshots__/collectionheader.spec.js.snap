@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionHeader component Matches/Renders a snapshot 1`] = `
+<li
+  className="collection-header testClass"
+  onClick={undefined}
+>
+  <h4>
+    Test collection content
+  </h4>
+</li>
+`;

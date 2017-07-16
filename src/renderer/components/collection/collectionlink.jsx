@@ -5,39 +5,38 @@ import classNames from 'classnames';
 import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The CollectionItem component, a part of the Collection component (MaterializeCSS project)
+ * @desc The CollectionLink component, a part of the Collection component (MaterializeCSS project)
  * @example An example can be found here: http://materializecss.com/collections.html
- *          import { Collection, CollectionItem } from './components/collection'
+ *          import { Collection, CollectionLink } from './components/collection'
  *          <Collection>             
- *              <CollectionItem>
+ *              <CollectionLink url="yourlink">
  *                  {your content}
- *              </CollectionItem>    
- *              <CollectionItem>
- *                  {your content}
- *              </CollectionItem>    
+ *              </CollectionLink>     
  *          </Collection
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
+ * @property {string} url - The target of the CollectionLink
  * @property {function} onClick - Function to call when the CollectionItem is clicked
  */
-const CollectionItem = class CollectionItem extends React.Component {
+const CollectionLink = class CollectionLink extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <li onClick={this.props.onClick} className={classNames(materialize['collection-item'], this.props.className)}>
+            <a href={this.props.url} onClick={this.props.onClick} className={classNames(materialize['collection-item'], this.props.className)}>
                 {this.props.children}
-            </li>
+            </a>
         )
     }
 };
 
-CollectionItem.propTypes = {
+CollectionLink.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    url: PropTypes.string,
     onClick: PropTypes.func
 };
 
-export default CollectionItem;
+export default CollectionLink;

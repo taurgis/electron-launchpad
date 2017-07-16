@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: renderer/components/button/fixedbutton.jsx</title>
+    <title>JSDoc: Source: renderer/components/collection/collectionheader.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: renderer/components/button/fixedbutton.jsx</h1>
+    <h1 class="page-title">Source: renderer/components/collection/collectionheader.jsx</h1>
 
     
 
@@ -30,44 +30,42 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import FloatingButton from './floatingbutton'
-
 import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The FixedButton component (MaterializeCSS project)
- * @example An example can be found here: http://materializecss.com/buttons.html
- *          import FixedButton from './components/fixedbutton'
- *          &lt;FixedButton>Button text&lt;/FixedButton>
+ * @desc The CollectionHeader component, a part of the Collection component (MaterializeCSS project)
+ * @example An example can be found here: http://materializecss.com/collections.html
+ *          import { Collection, CollectionHeader } from './components/collection'
+ *          &lt;Collection>             
+ *              &lt;CollectionHeader>
+ *                  {your content}
+ *              &lt;/CollectionHeader>    
+ *          &lt;/Collection
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
- * @property {boolean} animate - Whether or not a hover will trigger an animation
- * @property {function} onClick - The onclick event
+ * @property {function} onClick - Function to call when the CollectionItem is clicked
  */
-const FixedButton = class FixedButton extends React.Component {
+const CollectionHeader = class CollectionHeader extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            &lt;div className={materialize['fixed-action-btn']}>
-                &lt;FloatingButton className={this.props.className} animate={this.props.animate} onClick={this.props.onClick}>
-                    {this.props.children}
-                &lt;/FloatingButton>
-            &lt;/div>
+            &lt;li onClick={this.props.onClick} className={classNames(materialize['collection-header'], this.props.className)}>
+                &lt;h4>{this.props.children}&lt;/h4>
+            &lt;/li>
         )
     }
 };
 
-FixedButton.propTypes = {
+CollectionHeader.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    animate: PropTypes.bool,
     onClick: PropTypes.func
 };
 
-export default FixedButton;
+export default CollectionHeader;
 </code></pre>
         </article>
     </section>
