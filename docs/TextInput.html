@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Card</title>
+    <title>JSDoc: Class: TextInput</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Card</h1>
+    <h1 class="page-title">Class: TextInput</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2>Card</h2>
+        <h2>TextInput</h2>
         
     
 </header>
@@ -40,14 +40,14 @@
 
     
 
-    <h4 class="name" id="Card"><span class="type-signature"></span>new Card<span class="signature">(props)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="TextInput"><span class="type-signature"></span>new TextInput<span class="signature">(props)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    The card component (MaterializeCSS project)
+    The TextInput component for forms (MaterializeCSS project)
 </div>
 
 
@@ -157,6 +157,144 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The field ID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The field name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>label</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The input field label</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>placeholder</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The inputfield placeholder</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The input field value</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to execute when the field value changes</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -192,7 +330,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="renderer_components_card_card.jsx.html">renderer/components/card/card.jsx</a>, <a href="renderer_components_card_card.jsx.html#line18">line 18</a>
+        <a href="renderer_components_form_textinput.jsx.html">renderer/components/form/textinput.jsx</a>, <a href="renderer_components_form_textinput.jsx.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -219,11 +357,11 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/cards.html
-         import { Card } from './components/card'
-         &lt;Card>
-           {your content}
-         &lt;/Card>    </code></pre>
+    <pre class="prettyprint"><code>An example can be found here: http://materializecss.com/forms.html
+         import { TextInput } from './components/form'
+         &lt;Form>
+           &lt;TextInput name="firstname" label="label" placeholder="placeholder" value="value" onChange="onChange()" />
+         &lt;/Form>    </code></pre>
 
 
 

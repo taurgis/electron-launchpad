@@ -13,7 +13,7 @@ export function setupWindows() {
   windowManager.setBuildProcedure('splash', (callback, options) => {
     const win = new BrowserWindow({
       width: 285,
-      height: 320,
+      height: 285,
       modal: true,
       show: false,
       frame: false,

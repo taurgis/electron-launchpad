@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collection component Matches/Renders a snapshot 1`] = `
+<div
+  className="input-field testClass"
+>
+  <input
+    className="validate"
+    id="testid"
+    name="testname"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="testplaceholder"
+    type="text"
+    value="testvalue"
+  />
+  <label
+    className="active"
+    for="testname"
+  />
+</div>
+`;

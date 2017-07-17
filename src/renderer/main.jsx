@@ -13,6 +13,7 @@ import FaIcon from './components/faicon';
 import Dashboard from './containers/dashboard'
 import Components from './containers/components'
 import Charts from './containers/charts'
+import Forms from './containers/forms'
 
 class Main extends React.Component {
 
@@ -47,6 +48,11 @@ class Main extends React.Component {
                   <FaIcon code='bar-chart' size={1} color='#fff' />
                 </Link>
               </li>
+              <li>
+                <Link to={'/forms'} >
+                  <FaIcon code='check-square-o' size={1} color='#fff' />
+                </Link>
+              </li>
             </LeftMenu>
             <TopMenu />
           </header>
@@ -55,6 +61,7 @@ class Main extends React.Component {
             <Route path={loadingLocation} exact={true} component={Dashboard} />
             <Route path='/components' component={Components} />
             <Route path='/charts' component={Charts} />
+            <Route path='/forms' component={Forms} />
           </main>
 
         </div>

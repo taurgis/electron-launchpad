@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: renderer/components/collection/collection.jsx</title>
+    <title>JSDoc: Source: renderer/components/form/emailinput.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: renderer/components/collection/collection.jsx</h1>
+    <h1 class="page-title">Source: renderer/components/form/emailinput.jsx</h1>
 
     
 
@@ -30,38 +30,46 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import BaseTextInput from './basetextinput';
+
 import materialize from '../../styles/vendor/materialize.scss';
 
 /**
- * @desc The Collection component (MaterializeCSS project)
- * @example An example can be found here: http://materializecss.com/collections.html
- *          import { Collection } from './components/collection'
- *          &lt;Collection>
- *            {your content (li)}
- *          &lt;/Collection>    
+ * @desc The EmailInput component for forms (MaterializeCSS project)
+ * @example An example can be found here: http://materializecss.com/forms.html
+ *          import { EmailInput } from './components/form'
+ *          &lt;Form>
+ *            &lt;EmailInput name="email" label="label" placeholder="placeholder" value="value" onChange="onChange()" />
+ *          &lt;/Form>    
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
+ * @property {string} id - The field ID
+ * @property {string} name - The field name
+ * @property {string} label - The input field label
+ * @property {string} placeholder - The inputfield placeholder
+ * @property {string} value - The input field value
+ * @property {function} onChange - The function to execute when the field value changes
  */
-const Collection = class Collection extends React.Component {
+const EmailInput = class EmailInput extends BaseTextInput {
     constructor(props) {
         super(props);
-    }
-
-    render() {
-        return (
-            &lt;ul className={classNames(materialize.collection, this.props.className)}>
-                {this.props.children}
-            &lt;/ul>
-        )
+        
+        this.type = 'email';
     }
 };
 
-Collection.propTypes = {
+EmailInput.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    onChange: PropTypes.func
 };
 
-export default Collection;
+export default EmailInput;
 </code></pre>
         </article>
     </section>
