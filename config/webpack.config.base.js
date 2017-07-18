@@ -1,7 +1,7 @@
 const {
   join
 } = require('path');
-const path = require('path');
+
 var JsDocPlugin = require('jsdoc-webpack-plugin-v2');
 
 module.exports = {
@@ -32,6 +32,6 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.scss']
   },
   plugins: [new JsDocPlugin({
-    conf: path.join(__dirname, 'jsdoc.json'),
+    conf: join(__dirname, 'jsdoc.json'),
   })]
 };

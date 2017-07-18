@@ -1,14 +1,17 @@
-import { app, BrowserWindow } from 'electron';
-import { throttle } from 'lodash';
-import { getWindowManager } from './lib/window-manager';
-import { getPathToFile } from './lib/utils';
-import { createRPC } from './lib/rpc';
-import { loadFile, openFile, newFile } from './lib/files';
+import {app, BrowserWindow} from 'electron';
+import {throttle} from 'lodash';
+import {getWindowManager} from './lib/window-manager';
+import {getPathToFile} from './lib/utils';
+import {createRPC} from './lib/rpc';
+import {loadFile, openFile, newFile} from './lib/files';
+const {
+  join
+} = require('path');
 
 const windowManager = getWindowManager();
 
 export function setupWindows() {
-  console.log("setup");
+  console.log('setup');
   // Intro Screen
   windowManager.setBuildProcedure('splash', (callback, options) => {
     const win = new BrowserWindow({
@@ -18,7 +21,7 @@ export function setupWindows() {
       show: false,
       frame: false,
       resizable: false,
-      icon: __dirname + '/../../build/icon.png',
+      icon: join(__dirname, '/../../build/icon.png'),
       ...options
     });
 
@@ -39,7 +42,7 @@ export function setupWindows() {
       minWidth: 680,
       minHeight: 500,
       title: app.getName(),
-      icon: __dirname + '/../../build/icon.png',
+      icon: join(__dirname, '/../../build/icon.png'),
       titleBarStyle: 'hidden-inset',
       show: process.env.NODE_ENV === 'development',
       vibrancy: 'light'

@@ -1,6 +1,5 @@
 import path from 'path';
 import { BrowserWindow, dialog } from 'electron';
-import { isWindows } from './platform';
 import { getWindowManager } from './window-manager';
 
 const windowManager = getWindowManager();
@@ -10,12 +9,6 @@ const dialogOptions = {
     extensions: ['.log']
   }]
 };
-
-function normalizePath(filePath) {
-  filePath = decodeURI(filePath.replace(isWindows() ? /^file:[/]{2,3}/ : 'file://', ''));
-  filePath = path.normalize(filePath);
-  return filePath;
-}
 
 /**
  * Present an open dialog box

@@ -1,18 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
+import { Card, CardContent } from '../components/card';
 import FaIcon from '../components/faicon';
-import Breadcrumb from '../components/breadcrumb'
+import Breadcrumb from '../components/breadcrumb';
 
 import materialize from '../styles/vendor/materialize.scss';
-import dashboard from '../styles/containers/dashboard.scss';
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   showAlertBox() {
     alert('I clicked something');
   }
@@ -67,6 +62,4 @@ class Dashboard extends React.Component {
   }
 };
 
-
-
-export default Dashboard
+export default Dashboard;

@@ -33,11 +33,10 @@ app.on('ready', () => {
         win.close();
       });
     }, 2000);
-
   });
 
   // set the application menu
   Menu.setApplicationMenu(
     Menu.buildFromTemplate(menuTemplate)
   );
-})
+});
