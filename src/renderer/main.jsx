@@ -1,26 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import classNames from 'classnames';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
-import materialize from './styles/vendor/materialize.scss';
 import main from './styles/main.scss';
 import leftmenu from './styles/components/leftmenu.scss';
 
-import LeftMenu from './components/leftmenu'
-import TopMenu from './components/topmenu'
+import LeftMenu from './components/leftmenu';
+import TopMenu from './components/topmenu';
 import FaIcon from './components/faicon';
 
-import Dashboard from './containers/dashboard'
-import Components from './containers/components'
-import Charts from './containers/charts'
-import Forms from './containers/forms'
+import Dashboard from './containers/dashboard';
+import Components from './containers/components';
+import Charts from './containers/charts';
+import Forms from './containers/forms';
 
 class Main extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     var loadingLocation = location.pathname.replace('%20', ' ');
 
@@ -58,7 +51,7 @@ class Main extends React.Component {
           </header>
 
           <main>
-            <Route path={loadingLocation} exact={true} component={Dashboard} />
+            <Route path={loadingLocation} exact component={Dashboard} />
             <Route path='/components' component={Components} />
             <Route path='/charts' component={Charts} />
             <Route path='/forms' component={Forms} />
@@ -70,4 +63,4 @@ class Main extends React.Component {
   }
 };
 
-export default Main
+export default Main;

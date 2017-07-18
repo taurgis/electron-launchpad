@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 
-import FloatingButton from './floatingbutton'
+import FloatingButton from './floatingbutton';
 
 import materialize from '../../styles/vendor/materialize.scss';
 
@@ -17,26 +16,22 @@ import materialize from '../../styles/vendor/materialize.scss';
  * @property {function} onClick - The onclick event
  */
 const FixedButton = class FixedButton extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className={materialize['fixed-action-btn']}>
-                <FloatingButton className={this.props.className} animate={this.props.animate} onClick={this.props.onClick}>
-                    {this.props.children}
-                </FloatingButton>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={materialize['fixed-action-btn']}>
+        <FloatingButton className={this.props.className} animate={this.props.animate} onClick={this.props.onClick}>
+          {this.props.children}
+        </FloatingButton>
+      </div>
+    );
+  }
 };
 
 FixedButton.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    animate: PropTypes.bool,
-    onClick: PropTypes.func
+  children: PropTypes.node,
+  className: PropTypes.string,
+  animate: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 export default FixedButton;

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 
 import materialize from '../../styles/vendor/materialize.scss';
 
@@ -14,25 +13,21 @@ import materialize from '../../styles/vendor/materialize.scss';
  *              <CardContent />
  *              <CardAction />
  *            </CardStacked>
- *          </Card>    
+ *          </Card>
  * @param {*} props - React property object
  */
 const CardStacked = class CardStacked extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className={materialize['card-stacked']}>
-                {this.props.children}
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={materialize['card-stacked']}>
+        {this.props.children}
+      </div>
+    );
+  }
 };
 
 CardStacked.propTypes = {
-    children: PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default CardStacked;

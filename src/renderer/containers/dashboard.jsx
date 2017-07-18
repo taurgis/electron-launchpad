@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Card, CardContent } from '../components/card';
+import {Card, CardContent} from '../components/card';
 import FaIcon from '../components/faicon';
 import Breadcrumb from '../components/breadcrumb';
 

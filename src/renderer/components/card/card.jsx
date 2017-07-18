@@ -3,7 +3,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import materialize from '../../styles/vendor/materialize.scss';
-import card from '../../styles/components/card.scss';
 
 /**
  * @desc The card component (MaterializeCSS project)
@@ -11,15 +10,11 @@ import card from '../../styles/components/card.scss';
  *          import { Card } from './components/card'
  *          <Card>
  *            {your content}
- *          </Card>    
+ *          </Card>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  */
 const Card = class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={classNames(materialize.card, this.props.className)} style={{
@@ -27,7 +22,7 @@ const Card = class Card extends React.Component {
       }}>
         {this.props.children}
       </div>
-    )
+    );
   }
 };
 

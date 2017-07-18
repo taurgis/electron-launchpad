@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import classNames from 'classnames';
 
 import BaseTextInput from './basetextinput';
-
-import materialize from '../../styles/vendor/materialize.scss';
 
 /**
  * @desc The EmailInput component for forms (MaterializeCSS project)
@@ -12,7 +8,7 @@ import materialize from '../../styles/vendor/materialize.scss';
  *          import { EmailInput } from './components/form'
  *          <Form>
  *            <EmailInput name="email" label="label" placeholder="placeholder" value="value" onChange="onChange()" />
- *          </Form>    
+ *          </Form>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  * @property {string} id - The field ID
@@ -23,22 +19,22 @@ import materialize from '../../styles/vendor/materialize.scss';
  * @property {function} onChange - The function to execute when the field value changes
  */
 const EmailInput = class EmailInput extends BaseTextInput {
-    constructor(props) {
-        super(props);
-        
-        this.type = 'email';
-    }
+  constructor(props) {
+    super(props);
+
+    this.type = 'email';
+  }
 };
 
 EmailInput.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func
+  children: PropTypes.node,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 export default EmailInput;

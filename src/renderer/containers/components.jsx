@@ -1,21 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Card, CardTitle, CardStacked, CardImage, CardContent, CardAction } from '../components/card'
-import { RaisedButton, FloatingButton, FixedButton } from '../components/button'
-import { Collection, CollectionItem, CollectionHeader, CollectionLink } from '../components/collection'
-import CardPanel from '../components/cardpanel.jsx'
+import {Card, CardStacked, CardImage, CardContent, CardAction} from '../components/card';
+import {RaisedButton, FloatingButton, FixedButton} from '../components/button';
+import {Collection, CollectionItem, CollectionHeader, CollectionLink} from '../components/collection';
+import CardPanel from '../components/cardpanel.jsx';
 import FaIcon from '../components/faicon.jsx';
-import Breadcrumb from '../components/breadcrumb'
+import Breadcrumb from '../components/breadcrumb';
 
 import materialize from '../styles/vendor/materialize.scss';
-import dashboard from '../styles/containers/dashboard.scss';
 
 class Cards extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   showAlertBox() {
     alert('I clicked something');
   }
@@ -36,7 +31,7 @@ class Cards extends React.Component {
               <CardContent>
                 <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
               </CardContent>
-              <CardAction actions={[{ title: 'link 1', url: 'link url 1' }, { title: 'link 2', url: 'link url 2' }]} />
+              <CardAction actions={[{title: 'link 1', url: 'link url 1'}, {title: 'link 2', url: 'link url 2'}]} />
             </Card>
           </div>
           <div className={classNames(materialize.col, materialize.s6, materialize.l5)}>
@@ -46,7 +41,7 @@ class Cards extends React.Component {
                 <CardContent>
                   <p>I am a very simple card. I am good at containing small bits of information.</p>
                 </CardContent>
-                <CardAction actions={[{ title: 'link 1', url: 'link url 1' }]} />
+                <CardAction actions={[{title: 'link 1', url: 'link url 1'}]} />
               </CardStacked>
             </Card>
           </div>
@@ -56,7 +51,7 @@ class Cards extends React.Component {
                 <CardContent>
                   <p>I am a very simple card. I am good at containing small bits of information.</p>
                 </CardContent>
-                <CardAction actions={[{ title: 'link 1', url: 'link url 1' }]} />
+                <CardAction actions={[{title: 'link 1', url: 'link url 1'}]} />
               </CardStacked>
               <CardImage image={require('../styles/images/nature.jpg')} title='This is a title' />
             </Card>
@@ -75,7 +70,7 @@ class Cards extends React.Component {
           </div>
           <div className={classNames(materialize.col, materialize.s6, materialize.l5)}>
             <CardPanel className={materialize.teal}>
-              <span style={{ color: 'white' }}>
+              <span style={{color: 'white'}}>
                 I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
               </span>
             </CardPanel>
@@ -88,14 +83,14 @@ class Cards extends React.Component {
         </div>
         <div className={materialize.row}>
           <div className={classNames(materialize.col, materialize.s2, materialize.l2, materialize['offset-l1'])}>
-            <p><RaisedButton animate={true} onClick={this.showAlertBox}>A button</RaisedButton></p>
-            <p><RaisedButton animate={true} onClick={this.showAlertBox} className={materialize.red}>A button</RaisedButton></p>
-            <p><RaisedButton animate={true} onClick={this.showAlertBox}>An icon <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
-            <p><RaisedButton animate={true} onClick={this.showAlertBox} className={materialize.disabled}>disabled <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
+            <p><RaisedButton animate onClick={this.showAlertBox}>A button</RaisedButton></p>
+            <p><RaisedButton animate onClick={this.showAlertBox} className={materialize.red}>A button</RaisedButton></p>
+            <p><RaisedButton animate onClick={this.showAlertBox}>An icon <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
+            <p><RaisedButton animate onClick={this.showAlertBox} className={materialize.disabled}>disabled <FaIcon code='send' color='#fff' className={materialize.right} /></RaisedButton></p>
           </div>
           <div className={classNames(materialize.col, materialize.s2, materialize.l1)}>
-            <FloatingButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FloatingButton>
-            <FixedButton animate={true} onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FixedButton>
+            <FloatingButton animate onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FloatingButton>
+            <FixedButton animate onClick={this.showAlertBox} className={materialize.red}><FaIcon code='plus' color='#fff' /></FixedButton>
           </div>
         </div>
         <div className={materialize.row}>
@@ -115,7 +110,7 @@ class Cards extends React.Component {
                 <p>First Line <br />
                   Second Line
                 </p>
-                <a href="#!" className={materialize['secondary-content']}><FaIcon code='star'/></a>
+                <a href="#!" className={materialize['secondary-content']}><FaIcon code='star' /></a>
               </CollectionItem>
             </Collection>
           </div>
@@ -125,4 +120,4 @@ class Cards extends React.Component {
   }
 };
 
-export default Cards
+export default Cards;

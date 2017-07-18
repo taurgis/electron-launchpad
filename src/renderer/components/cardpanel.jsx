@@ -10,21 +10,17 @@ import materialize from '../styles/vendor/materialize.scss';
  *          import CardPanel from './components/cardpanel.jsx'
  *          <CardPanel className='teal'>
  *            {your content}
- *          </CardPanel>    
+ *          </CardPanel>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  */
 const CardPanel = class CardPanel extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={classNames(materialize['card-panel'], this.props.className)}>
         {this.props.children}
       </div>
-    )
+    );
   }
 };
 

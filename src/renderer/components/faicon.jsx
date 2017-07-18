@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import icon from '../styles/icon.scss'
+import icon from '../styles/icon.scss';
 
 const FaIcon = class FaIcon extends React.Component {
   constructor(props) {
@@ -19,15 +19,15 @@ const FaIcon = class FaIcon extends React.Component {
     return (
       <this.Container style={{
         color: this.props.color
-      }} className={classNames(icon.fa, icon['fa-' + this.props.code], ((this.props.size) ? icon['fa-' + this.props.size + 'x'] : ''), this.props.className)}></this.Container>
-    )
+      }} className={classNames(icon.fa, icon['fa-' + this.props.code], ((this.props.size) ? icon['fa-' + this.props.size + 'x'] : ''), this.props.className)} />
+    );
   }
 };
 
 FaIcon.propTypes = {
   code: PropTypes.string.isRequired,
   size: PropTypes.number,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
   container: PropTypes.string,
   className: PropTypes.string
 };

@@ -11,3 +11,4 @@ npm --version
 
 npm run build
 npm test
+npm run lint

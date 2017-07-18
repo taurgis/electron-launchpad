@@ -10,27 +10,23 @@ import materialize from '../../styles/vendor/materialize.scss';
  *          import { Collection } from './components/collection'
  *          <Collection>
  *            {your content (li)}
- *          </Collection>    
+ *          </Collection>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  */
 const Collection = class Collection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <ul className={classNames(materialize.collection, this.props.className)}>
-                {this.props.children}
-            </ul>
-        )
-    }
+  render() {
+    return (
+      <ul className={classNames(materialize.collection, this.props.className)}>
+        {this.props.children}
+      </ul>
+    );
+  }
 };
 
 Collection.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 export default Collection;

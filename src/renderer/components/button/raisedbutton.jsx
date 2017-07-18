@@ -15,28 +15,28 @@ import materialize from '../../styles/vendor/materialize.scss';
  * @property {function} onClick - The onclick event
  */
 const RaisedButton = class RaisedButton extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        if (this.props.animate) {
-            this.wavesAnimation = [materialize['waves-effect'], materialize['waves-light']];
-        }
+    if (this.props.animate) {
+      this.wavesAnimation = [materialize['waves-effect'], materialize['waves-light']];
     }
+  }
 
-    render() {
-        return (
-            <button className={classNames(materialize.btn, this.props.className, this.wavesAnimation)} onClick={this.props.onClick}>
-                {this.props.children}
-            </button>
-        )
-    }
+  render() {
+    return (
+      <button className={classNames(materialize.btn, this.props.className, this.wavesAnimation)} onClick={this.props.onClick}>
+        {this.props.children}
+      </button>
+    );
+  }
 };
 
 RaisedButton.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    animate: PropTypes.bool,
-    onClick: PropTypes.func
+  children: PropTypes.node,
+  className: PropTypes.string,
+  animate: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 export default RaisedButton;

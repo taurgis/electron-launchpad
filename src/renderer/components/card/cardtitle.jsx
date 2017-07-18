@@ -12,27 +12,23 @@ import materialize from '../../styles/vendor/materialize.scss';
  *             <CardTitle>
  *               My title
  *             </CardTitle>
- *          </Card>    
+ *          </Card>
  * @param {*} props - React property object
  * @property {string} className - Additional classes for the component
  */
 const CardTitle = class CardTitle extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <span className={materialize['card-title']}>
-                {this.props.children}
-            </span>
-        )
-    }
+  render() {
+    return (
+      <span className={classNames(materialize['card-title'], this.props.className)}>
+        {this.props.children}
+      </span>
+    );
+  }
 };
 
 CardTitle.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 export default CardTitle;

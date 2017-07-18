@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 
 import materialize from '../../styles/vendor/materialize.scss';
 
@@ -10,36 +9,32 @@ import materialize from '../../styles/vendor/materialize.scss';
  *          import { Card, CardImage } from './components/card'
  *          <Card>
  *             <CardImage image='http://.../image.jpg' title='My image title' />
- *          </Card>    
+ *          </Card>
  * @param {*} props - React property object
  * @property {string} image - The image URL
  * @property {string} title - The title to appear on the image
  */
 const CardImage = class CardImage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className={materialize['card-image']}>
-                <img src={this.props.image} />
-                <span className={materialize['card-title']}>{this.props.title}</span>
-                {this.props.children}
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={materialize['card-image']}>
+        <img src={this.props.image} />
+        <span className={materialize['card-title']}>{this.props.title}</span>
+        {this.props.children}
+      </div>
+    );
+  }
 };
 
 CardImage.propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-        PropTypes.node
-    ]),
+  image: PropTypes.string,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.node
+  ]),
 
-    children: PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default CardImage;
